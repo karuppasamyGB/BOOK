@@ -18,7 +18,7 @@ const Home = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get('https://book-backend-mu-ten.vercel.app/books')
+            .get('https://book-y5um.onrender.com/books')
             .then((response) => {
                 setBooks(response.data.data);
                 setLoading(false);

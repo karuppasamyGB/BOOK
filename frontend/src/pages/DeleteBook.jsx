@@ -14,7 +14,7 @@ const DeleteBook = () => {
   const { id } = useParams();
  /* useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`https://book-y5um.onrender.com/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -34,7 +34,7 @@ const DeleteBook = () => {
     };
     setLoading(true);
     axios
-      .delete(`https://book-backend-mu-ten.vercel.app/books/${id}`, data)
+      .delete(`https://book-y5um.onrender.com/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book deleted successfully',{variant:'success'});

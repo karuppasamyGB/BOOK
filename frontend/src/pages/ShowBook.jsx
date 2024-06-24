@@ -12,7 +12,7 @@ const ShowBook = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`https://book-backend-mu-ten.vercel.app/books/${id}`)
+            .get(`https://book-y5um.onrender.com//books/${id}`)
             .then((response) => {
                 setBook(response.data);
                 setLoading(false);

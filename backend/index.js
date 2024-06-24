@@ -7,17 +7,13 @@ import cors from "cors";
 const app = express();
 
 app.use(express.json());
-//Middleware for handling CORS policy
-//option 1  ---- Allow all origin with default of cors(*)
-app.use(cors());
-//option 2 ---- allow custom origins
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     allowedHeaders: ["content-Type"],
-//   })
-// );
+
+app.use(cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+
+  }));
+
 
 app.get("/", (request, response) => {
   console.log(request);

@@ -15,7 +15,7 @@ const EditBook = () => {
   const {enqueueSnackbar} = useSnackbar();
   useEffect(()=>{
     setLoading(true);
-    axios.get(`https://book-backend-mu-ten.vercel.app/books/${id}`)
+    axios.get(`https://book-y5um.onrender.com/books/${id}`)
     .then((response)=>{
       setAuthor(response.data.author);
       setPublishYear(response.data.publishYear);

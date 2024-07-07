@@ -34,7 +34,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`https://book-backend-05m5.onrender.com/`, data)
+      .put(`https://book-backend-05m5.onrender.com/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book edited successfully',{variant:'success'});

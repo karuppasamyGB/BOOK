@@ -18,7 +18,7 @@ const CreateBooks = () => {
       publishYear,
     };
     setLoading(true);
-    axios.post('https://book-y5um.onrender.com/books', data)
+    axios.post('https://book-backend-05m5.onrender.com/', data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created Succcessfully',{variant: 'success'});

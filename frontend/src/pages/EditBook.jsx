@@ -15,7 +15,7 @@ const EditBook = () => {
   const {enqueueSnackbar} = useSnackbar();
   useEffect(()=>{
     setLoading(true);
-    axios.get(`https://book-y5um.onrender.com/books/${id}`)
+    axios.get(`https://book-backend-05m5.onrender.com/`)
     .then((response)=>{
       setAuthor(response.data.author);
       setPublishYear(response.data.publishYear);
@@ -34,7 +34,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`https://book-y5um.onrender.com/books/${id}`, data)
+      .put(`https://book-backend-05m5.onrender.com/`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book edited successfully',{variant:'success'});

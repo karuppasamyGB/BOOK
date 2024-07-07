@@ -42,7 +42,7 @@ const BookTable = ({ books }) => {
                 <Link to={`/books/details/${book._id}`}>
                   <BsInfoCircle className='text-2xl text-green-800'/>
                 </Link>
-                <Link to={`/books/edit${book._id}`}>
+                <Link to={`/books/edit/${book._id}`}>
                  <AiOutlineEdit classname='text-2xl text-yellow-600'/>
                 </Link>
                 <Link to={`/books/delete/${book._id}`}>

@@ -3,17 +3,12 @@ import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import bookRoute from "./routes/bookRoute.js";
 import cors from "cors";
-
+const PORT = process.env.PORT || 5555;
 const app = express();
 
 app.use(express.json());
 
-app.use(cors({
-    origin: "https://book-frontend-vert.vercel.app/",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-
-  }));
-
+app.use(cors({  }));
 
 app.get("/", (request, response) => {
   console.log(request);
